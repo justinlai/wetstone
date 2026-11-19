@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import { useEffect, useRef } from "react";
 import { Button } from "../Button";
 
@@ -129,7 +129,7 @@ export function DepthIntro() {
           sits above it with z-10 and has no background of its own. */}
       <section aria-hidden className="relative -mt-[48svh] h-[48svh] overflow-hidden lg:-mt-[300px] lg:h-[300px]">
         <div ref={terrainRef} className="absolute inset-0 opacity-0 will-change-transform">
-          <Image src="/images/terrain.jpg" alt="" fill sizes="100vw" className="object-cover object-bottom" />
+          <ExportedImage placeholder="empty" src="/images/terrain.jpg" alt="" fill sizes="100vw" className="object-cover object-bottom" />
           <div className="absolute inset-x-0 top-0 h-[80px] bg-gradient-to-b from-abyss to-transparent" />
         </div>
       </section>

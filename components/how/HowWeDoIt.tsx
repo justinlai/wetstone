@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import { useEffect, useRef, useState } from "react";
 import { STEPS } from "./steps";
 
@@ -191,7 +191,7 @@ export function HowWeDoIt() {
                   >
                     {/* Icon shrinks on short phones so the longest step never runs into the next-step bar. */}
                     <div className="relative size-[clamp(96px,calc(100svh-600px),160px)] lg:size-[min(260px,calc(100svh-560px))]">
-                      <Image src={step.icon} alt="" fill sizes="260px" className="object-contain object-left" />
+                      <ExportedImage placeholder="empty" src={step.icon} alt="" fill sizes="260px" className="object-contain object-left" />
                     </div>
                     <h3 className="mt-16 text-[32px] font-light leading-[1.05] tracking-[-0.03em] lg:mt-14 lg:text-[44px]">{step.title}</h3>
                     <p className="mt-4 max-w-[500px] text-[16px] leading-[1.5] text-muted lg:text-[19px] lg:leading-[1.55]">{step.body}</p>
@@ -233,7 +233,7 @@ export function HowWeDoIt() {
           {STEPS.map((step, i) => (
             <li key={step.title}>
               <div className="relative size-[160px]">
-                <Image src={step.icon} alt="" fill sizes="160px" className="object-contain object-left" />
+                <ExportedImage placeholder="empty" src={step.icon} alt="" fill sizes="160px" className="object-contain object-left" />
               </div>
               <p className="mt-6 text-[13px] tabular-nums text-white/60">{pad(i + 1)}</p>
               <h3 className="mt-2 text-[32px] font-light tracking-[-0.03em]">{step.title}</h3>

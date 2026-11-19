@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import type { ReactNode } from "react";
 import { Reveal } from "./Reveal";
 
@@ -35,7 +35,7 @@ export function SplitFeature({ heading, headingClassName = "", image, imageWidth
             className={`relative mx-[25px] mt-[50px] shrink-0 overflow-hidden bg-[#767676] lg:mt-0 lg:ml-(--gutter) lg:mr-0 ${imageHeightClass} ${imageWidth === 742 ? "lg:w-[calc(51.5%-var(--gutter))]" : "lg:w-[calc(58.5%-var(--gutter))]"}`}
           >
             <Reveal variant="image" className="absolute inset-0">
-              <Image src={image.src} alt={image.alt} fill sizes={`(min-width: 1024px) ${imageWidth}px, 100vw`} className="object-cover" style={{ objectPosition: image.objectPosition }} />
+              <ExportedImage placeholder="empty" src={image.src} alt={image.alt} fill sizes={`(min-width: 1024px) ${imageWidth}px, 100vw`} className="object-cover" style={{ objectPosition: image.objectPosition }} />
             </Reveal>
           </div>
           <Reveal delay={150} className={`px-[25px] lg:flex lg:h-[600px] lg:flex-1 lg:flex-col lg:justify-center lg:pr-(--gutter) ${bodyClassName}`}>

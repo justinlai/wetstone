@@ -4,8 +4,8 @@ import { Reveal } from "./Reveal";
 
 const SITE_LINKS = [
   { href: "/", label: "Home" },
-  { href: "/why-wetstone", label: "Why Wetstone" },
-  { href: "/how-it-works", label: "How it Works" },
+  { href: "/why-wetstone", label: "Our Mission" },
+  { href: "/how-it-works", label: "How We Work" },
   { href: "/about", label: "About Us" },
 ];
 const EMAILS = ["media@wetstone.co", "info@wetstone.co"];
@@ -94,7 +94,7 @@ export function Footer() {
           <div className="relative flex flex-col gap-[48px] lg:h-full lg:flex-row lg:justify-between lg:gap-0">
             <div className="flex flex-col items-start gap-6">
               <Image src="/icons/footer-wordmark.svg" alt="Wetstone" width={224} height={29} className="h-[22px] w-[172px] lg:h-[28.8px] lg:w-[224.5px]" />
-              <ul className="flex flex-col gap-2 text-[13px] font-medium uppercase leading-none tracking-[0.02em] text-white/70 lg:text-[10.3px]">
+              <ul className="flex flex-col gap-2 text-[17px] font-medium uppercase leading-none tracking-[0.02em] text-white/70 md:text-[15px] lg:text-[14.3px]">
                 {EMAILS.map((email) => (
                   <li key={email}>
                     <a href={`mailto:${email}`} className="transition-colors hover:text-white">
@@ -103,12 +103,12 @@ export function Footer() {
                   </li>
                 ))}
               </ul>
-              <a href="https://www.linkedin.com/company/wetstoneglobal/" target="_blank" rel="noreferrer" aria-label="Wetstone on LinkedIn">
-                <Image src="/icons/linkedin.svg" alt="" width={18} height={18} />
+              <a href="https://www.linkedin.com/company/wetstoneglobal/" target="_blank" rel="noreferrer" aria-label="Wetstone on LinkedIn" className="max-lg:absolute max-lg:bottom-[38px] max-lg:right-6 lg:static">
+                <Image src="/icons/linkedin.svg" alt="" width={20} height={20} />
               </a>
             </div>
 
-            <ul className="mt-[120px] flex flex-col gap-[14.6px] text-[14px] font-medium uppercase leading-none tracking-[0.02em] text-white/70 lg:mt-0 lg:w-[125px] lg:gap-[17.7px] lg:text-[10.3px]">
+            <ul className="mt-[120px] flex flex-col gap-[14.6px] text-[18px] font-medium uppercase leading-none tracking-[0.02em] text-white/70 md:text-[16px] lg:mt-0 lg:w-[125px] lg:gap-[17.7px] lg:text-[14.3px]">
               {SITE_LINKS.map((link) => (
                 <li key={link.label}>
                   <Link href={link.href} className="transition-colors hover:text-white">
@@ -118,7 +118,7 @@ export function Footer() {
               ))}
             </ul>
 
-            <p className="font-mono text-[12px] uppercase leading-[1.3] tracking-[0.05em] text-white/50 lg:absolute lg:bottom-[60px] lg:left-0 lg:text-[11.8px]">
+            <p className="text-[16px] uppercase leading-[1.3] tracking-[0.05em] text-white/50 lg:absolute lg:bottom-[60px] lg:left-0 lg:text-[15.8px]">
               Wetstone Global, Inc
             </p>
           </div>

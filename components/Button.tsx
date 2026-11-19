@@ -14,7 +14,7 @@ type ButtonProps = {
 const variants = {
   navy: "border-navy text-navy before:bg-navy hover:text-white",
   light: "border-white text-white before:bg-white hover:text-navy",
-  current: "border-current before:bg-current/15",
+  current: "border-current before:bg-current hover:text-white",
   glass: "border-transparent bg-white/10 text-white backdrop-blur-[15px] before:bg-white/15",
 };
 

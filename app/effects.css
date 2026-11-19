@@ -17,7 +17,7 @@
 .hero-radar,
 .hero-radar-counter {
   transform-origin: 50% 50%;
-  animation: hero-radar 14s linear -0.5s infinite both;
+  animation: hero-radar 14s linear -3s infinite both;
 }
 .hero-radar-counter {
   animation-direction: reverse;

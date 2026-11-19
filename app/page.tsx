@@ -16,8 +16,8 @@ export default function HomePage() {
       {/* "A team built for a hard problem": headline + button on the left, photo on the right (Figma 539:48120). */}
       <section className="bg-white px-[25px] py-[50px] lg:flex lg:items-center lg:justify-end lg:gap-[88px] lg:px-(--gutter) lg:py-[102px]">
         <Reveal className="flex flex-col items-start gap-[27px] lg:gap-[19px]">
-          <h2 className="max-w-[408px] text-[34px] lg:max-w-[560px] font-medium leading-[1.1] tracking-[-0.03em] text-navy lg:text-[64px]">
-            Deep experience, dynamically harnessed.
+          <h2 className="max-w-[408px] text-[28px] lg:max-w-[560px] font-medium leading-[1.1] tracking-[-0.03em] text-navy lg:text-[44px]">
+            Deep experience, new challenge
           </h2>
           <Button href="/about#leadership">Explore the team</Button>
         </Reveal>

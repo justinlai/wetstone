@@ -136,7 +136,7 @@ export function HeroSweep() {
 
       <Reveal className="absolute inset-x-6 bottom-[56px] lg:inset-x-(--gutter) lg:bottom-[72px]">
         <h1 className="max-w-[340px] text-[38px] font-semibold leading-[0.98] tracking-[-0.035em] text-white lg:max-w-[760px] lg:text-[76px]">
-          The global offshore mining company.
+          The global offshore mining company
         </h1>
       </Reveal>
     </section>

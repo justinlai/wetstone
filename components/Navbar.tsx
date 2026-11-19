@@ -6,9 +6,9 @@ import { useEffect, useRef, useState } from "react";
 import { Logo } from "./Logo";
 
 export const NAV_LINKS = [
-  { href: "/why-wetstone", label: "Why Wetstone" },
-  { href: "/how-it-works", label: "How it works" },
-  { href: "/about", label: "About us" },
+  { href: "/why-wetstone", label: "Our Mission" },
+  { href: "/how-it-works", label: "How We Work" },
+  { href: "/about", label: "About Us" },
 ];
 
 type Theme = "light" | "dark";
@@ -106,21 +106,27 @@ export function Navbar() {
       </nav>
 
       {/* Mobile menu: drops down from the bar in the same width (old Webflow style), small uppercase links. */}
-      <div id="mobile-menu" hidden={!open} className="bg-navy px-5 pt-3 pb-8 lg:hidden">
-        <ul className="flex flex-col gap-6">
-          {NAV_LINKS.map((link) => (
-            <li key={link.href}>
-              <Link
-                href={link.href}
-                onClick={() => setOpen(false)}
-                aria-current={pathname === link.href ? "page" : undefined}
-                className="block text-[12px] font-medium uppercase leading-none tracking-[0.04em] text-white"
-              >
-                {link.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
+      <div
+        id="mobile-menu"
+        aria-hidden={!open}
+        className={`grid overflow-hidden bg-navy transition-[grid-template-rows,opacity] duration-300 ease-in-out lg:hidden ${open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0 pointer-events-none"}`}
+      >
+        <div className="overflow-hidden">
+          <ul className="flex flex-col gap-6 px-5 pt-3 pb-8">
+            {NAV_LINKS.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  aria-current={pathname === link.href ? "page" : undefined}
+                  className="block text-[14px] font-medium uppercase leading-none tracking-[0.04em] text-white"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </header>
   );

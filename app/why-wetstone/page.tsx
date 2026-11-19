@@ -35,13 +35,7 @@ export default function WhyWetstonePage() {
     <>
       <PageHero
         eyebrow="Our mission"
-        title={
-          <>
-            The world needs more rocks.
-            <br />
-            The ocean is the best source.
-          </>
-        }
+        title="The world needs more minerals, the seafloor is the best source"
         image={{ src: "/images/why-map-2x.jpg", alt: "Relief map of the world’s ocean floor", objectPosition: "50% 50%" }}
         imageHeightClass="h-[339px] lg:h-[484px]"
       />
@@ -75,14 +69,9 @@ export default function WhyWetstonePage() {
       />
 
       <SplitFeature
-        heading={
-          <>
-            <span className="font-medium">A new copper mine takes 17 years to bring online,</span>{" "}
-            <span className="font-semibold">Wetstone is building a new metal supply chain in 5.</span>
-          </>
-        }
+        heading="A new terrestrial mine takes 20 years to build–– Wetstone is building bigger, better mines in 5."
         headingClassName="text-[34px] leading-[1.1] tracking-[-0.03em] text-black lg:max-w-[1124px] lg:text-[64px]"
-        image={{ src: "/images/crew-sunset-v2.jpg", alt: "Crew in safety gear recovering survey equipment on deck at sunset", objectPosition: "50% 50%" }}
+        image={{ src: "/images/boat-deck.jpg", alt: "Crew on deck of a research vessel at sea", objectPosition: "50% 50%" }}
         imageWidth={842}
         imageHeightClass="h-[278px] lg:h-[600px]"
         rowGapClass="lg:mt-[134px]"
@@ -90,12 +79,11 @@ export default function WhyWetstonePage() {
       >
         <div className="space-y-[30px] text-[19px] font-light leading-[30px] tracking-[-0.01em] text-black lg:text-[18px]">
           <p>
-            The IEA’s 2025 outlook projects a potential 30% copper supply shortfall by 2035, based on existing and announced mining projects. One new copper mine adds supply, but the process won’t serve the next century. Wetstone’s floating technology allows for speed, scale, and secure supply.
+            The IEA’s 2025 outlook projects a 30% copper shortfall by 2035, other metals are similarly stretched. New mines add supply but don’t scale the industry — Wetstone’s floating mines do both
           </p>
-          <p>To solve for the next century, Wetstone is taking to the seas.</p>
         </div>
-        <Button href="/about#leadership" className="mt-[27px] self-start">
-          Our Team
+        <Button href="/about" className="mt-[27px] self-start">
+          About Us
         </Button>
       </SplitFeature>
       <div className="lg:h-[36px]" />

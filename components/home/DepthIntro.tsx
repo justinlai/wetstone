@@ -33,6 +33,7 @@ export function DepthIntro() {
   const markerRef = useRef<HTMLDivElement>(null);
   const labelRef = useRef<HTMLSpanElement>(null);
   const terrainRef = useRef<HTMLDivElement>(null);
+  const terrainSectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -66,9 +67,10 @@ export function DepthIntro() {
         lastLabel = label;
       }
 
-      // Stage 2: the wave texture rises in behind the button over the last part of the dive.
+      // Stage 2: the wave texture rises in in sync with the dark bg so the two sections always match.
       const m = mobile.matches;
-      const terrain = still ? 1 : smooth(0.55, 1, p);
+      const terrain = still ? 1 : smooth(0, 1, p);
+      if (terrainSectionRef.current) terrainSectionRef.current.style.backgroundColor = bg;
       terrainRef.current!.style.opacity = String(terrain);
       terrainRef.current!.style.transform = `translate3d(0, ${((1 - terrain) * (m ? 32 : 40)).toFixed(1)}px, 0)`;
     };
@@ -97,16 +99,21 @@ export function DepthIntro() {
       <section ref={diveRef} className="relative h-[calc(100svh+900px)] bg-white motion-reduce:h-svh lg:h-[calc(100svh+420px)]">
         <div
           ref={stageRef}
-          className="sticky top-0 z-10 flex h-svh flex-col items-center justify-between px-6 pt-[112px] pb-10 text-navy lg:px-(--gutter) lg:pt-[128px] lg:pb-16"
+          className="sticky top-0 z-10 flex h-svh flex-col items-center px-6 pt-[112px] pb-[112px] text-navy lg:px-(--gutter) lg:pt-[128px] lg:pb-[128px]"
         >
-          <h2 className="max-w-[342px] text-center text-[28px] font-medium leading-[1.15] tracking-[-0.025em] lg:max-w-[880px] lg:text-[44px] lg:leading-[1.12]">
-            Secure, sustainable, and scalable technology to supply the next 100 years of minerals demand.
-          </h2>
+          <div className="flex flex-col items-center gap-6">
+            <h2 className="max-w-[342px] text-center text-[28px] font-medium leading-[1.15] tracking-[-0.025em] lg:max-w-[880px] lg:text-[44px] lg:leading-[1.12]">
+              Secure, scalable, and sustainable technology for the next 100 years of minerals demand
+            </h2>
+            <Button href="/why-wetstone" variant="current">
+              Our Mission
+            </Button>
+          </div>
 
           <div
             ref={gaugeRef}
             aria-hidden
-            className="relative my-6 h-[min(420px,calc(100svh-354px))] w-3 shrink-0 lg:h-[min(480px,calc(100svh-380px))] lg:w-[14px]"
+            className="relative my-auto h-[min(420px,calc(100svh-420px))] w-3 shrink-0 lg:h-[min(480px,calc(100svh-460px))] lg:w-[14px]"
           >
             <div className="absolute inset-0 opacity-[0.28]" style={ticks} />
             <div ref={fillRef} className="absolute inset-0" style={{ ...ticks, clipPath: "inset(0 0 100% 0)" }} />
@@ -117,20 +124,22 @@ export function DepthIntro() {
               </span>
             </div>
           </div>
-
-          <Button href="/why-wetstone" variant="current">
-            Our mission
-          </Button>
         </div>
       </section>
 
       {/* Wave texture: laid over the bottom of the dive (negative margin equal to its height), so the
           section ends right below the "Our mission" button and the waves run behind it. The dive's stage
           sits above it with z-10 and has no background of its own. */}
-      <section aria-hidden className="relative -mt-[48svh] h-[48svh] overflow-hidden lg:-mt-[300px] lg:h-[300px]">
-        <div ref={terrainRef} className="absolute inset-0 opacity-0 will-change-transform">
-          <Image src="/images/terrain.jpg" alt="" fill sizes="100vw" className="object-cover object-bottom" />
-          <div className="absolute inset-x-0 top-0 h-[80px] bg-gradient-to-b from-abyss to-transparent" />
+      <section ref={terrainSectionRef} aria-hidden className="relative -mt-[calc(48svh+64px)] h-[calc(48svh+60px)] overflow-hidden lg:-mt-[364px] lg:h-[360px]">
+        <div
+          ref={terrainRef}
+          className="absolute inset-0 opacity-0 will-change-transform"
+          style={{
+            maskImage: "linear-gradient(to bottom, transparent 0%, black 18%)",
+            WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 18%)",
+          }}
+        >
+          <Image src="/images/depth-waves.svg" alt="" fill unoptimized className="object-cover object-bottom" />
         </div>
       </section>
     </>

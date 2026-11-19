@@ -171,10 +171,10 @@ export function ValueChain() {
 
       <Reveal className="relative px-6 pb-16 pt-2 lg:absolute lg:left-[calc(50%+76.5px)] lg:top-[calc(50%-96.5px)] lg:w-[438px] lg:p-0">
         <h2 className="text-[34px] font-medium leading-[1.1] tracking-[-0.03em] text-white lg:text-[48px]">
-          Wetstone is building the full ocean mineral value chain.
+          Wetstone is building the full ocean mineral value chain
         </h2>
         <Button href="/how-it-works" variant="light" className="mt-8 lg:mt-[50px]">
-          How it works
+          How we work
         </Button>
       </Reveal>
     </section>

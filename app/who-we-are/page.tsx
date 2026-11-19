@@ -80,7 +80,7 @@ const LEADERS = [
     role: "VP, Corporate Affairs",
     photo: "/images/leader-dan.jpg",
     linkedin: "https://www.linkedin.com/in/danielworrall/",
-    bio: "Dan served as Fortescue’s Global Head of Government Relations, Rio Tinto’s VP Commercial in Singapore, Rio Tinto’s CEO in Mongolia, ExxonMobil Chemical’s Group Head of Public Affairs, and ExxonMobil’s Head of Public Affairs for PNG LNG. He started his career at Shell and holds an MA in International Relations from Cambridge University.",
+    bio: "Dan served as Fortescue’s Global Head of Government Relations, Rio Tinto’s VP of Commercial in Singapore, Rio Tinto’s CEO in Mongolia, ExxonMobil Chemical’s Group Head of Public Affairs, and ExxonMobil’s Head of Public Affairs for PNG LNG. He started his career at Shell and holds an MA in International Relations from Cambridge University.",
   },
   {
     name: "Lynda Nwike",

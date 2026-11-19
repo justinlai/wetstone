@@ -8,7 +8,7 @@ export type Step = { title: string; body: string; icon: string };
 export const STEPS: Step[] = [
   {
     title: "Map the opportunity",
-    body: "We gather global seabed data, develop proprietary models to understand mineral resources and marine environment, and then improve those models in real time during exploration.",
+    body: "We gather global seabed data, develop proprietary models to understand mineral resources and the marine environment, and then improve those models in real time during exploration.",
     icon: "/icons/steps/step-01.svg",
   },
   {

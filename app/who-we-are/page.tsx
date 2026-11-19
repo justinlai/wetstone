@@ -37,7 +37,7 @@ const LEADERS = [
     name: "Michael Lodge",
     role: "VP, Regulatory Affairs",
     photo: "/images/leader-michael.jpg",
-    linkedin: undefined,
+    linkedin: "https://www.linkedin.com/in/michaelwlodge/",
     bio: "Michael joined Wetstone after two terms as the Secretary General of the International Seabed Authority, from 2017 to 2024. Before that, he helped to establish the Western and Central Pacific Fisheries Commission and served as a Magistrate in the Solomon Islands and a lawyer in Kiribati.",
   },
   {

@@ -103,9 +103,14 @@ export function Footer() {
                   </li>
                 ))}
               </ul>
-              <a href="https://www.linkedin.com/company/wetstoneglobal/" target="_blank" rel="noreferrer" aria-label="Wetstone on LinkedIn" className="hidden lg:block">
-                <ExportedImage placeholder="empty" src="/icons/linkedin.svg" alt="" width={20} height={20} />
-              </a>
+              <div className="hidden items-center gap-3 lg:flex">
+                <a href="https://www.linkedin.com/company/wetstoneglobal/" target="_blank" rel="noreferrer" aria-label="Wetstone on LinkedIn">
+                  <ExportedImage placeholder="empty" src="/icons/linkedin.svg" alt="" width={20} height={20} />
+                </a>
+                <a href="https://x.com/WetstoneGlobal" target="_blank" rel="noreferrer" aria-label="Wetstone on X">
+                  <ExportedImage placeholder="empty" src="/icons/x.svg" alt="" width={20} height={20} />
+                </a>
+              </div>
             </div>
 
             <ul className="mt-[120px] flex flex-col gap-[14.6px] text-[18px] font-medium uppercase leading-none tracking-[0.02em] text-white/70 md:text-[16px] lg:mt-0 lg:ml-auto lg:w-[125px] lg:gap-[17.7px] lg:text-[14.3px]">
@@ -122,9 +127,14 @@ export function Footer() {
               <p className="text-[16px] uppercase leading-[1.3] tracking-[0.05em] text-white/50 lg:absolute lg:bottom-[60px] lg:left-0 lg:text-[15.8px]">
                 Wetstone Global Inc
               </p>
-              <a href="https://www.linkedin.com/company/wetstoneglobal/" target="_blank" rel="noreferrer" aria-label="Wetstone on LinkedIn" className="lg:hidden">
-                <ExportedImage placeholder="empty" src="/icons/linkedin.svg" alt="" width={20} height={20} />
-              </a>
+              <div className="flex items-center gap-3 lg:hidden">
+                <a href="https://www.linkedin.com/company/wetstoneglobal/" target="_blank" rel="noreferrer" aria-label="Wetstone on LinkedIn">
+                  <ExportedImage placeholder="empty" src="/icons/linkedin.svg" alt="" width={20} height={20} />
+                </a>
+                <a href="https://x.com/WetstoneGlobal" target="_blank" rel="noreferrer" aria-label="Wetstone on X">
+                  <ExportedImage placeholder="empty" src="/icons/x.svg" alt="" width={20} height={20} />
+                </a>
+              </div>
             </div>
           </div>
         </Reveal>

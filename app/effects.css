@@ -1,0 +1,83 @@
+/*
+ * Animations and layout rules added after the first launch, kept apart from globals.css so a
+ * stale build cache can't drop them (Vercel served an old compile of globals.css without them).
+ */
+
+/* Home hero radar (option E): a square centred on the pivot turns once every 14s; the heat map
+   inside it turns the other way so it stays fixed on the map while the masked trail sweeps over it.
+   Transform-only, so it stays smooth in Safari. */
+@keyframes hero-radar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.hero-radar,
+.hero-radar-counter {
+  transform-origin: 50% 50%;
+  animation: hero-radar 14s linear -0.5s infinite both;
+}
+.hero-radar-counter {
+  animation-direction: reverse;
+}
+/* Footer radar: the beam starts hidden past the fan's left edge (−47.5°), sweeps right across it,
+   leaves past the right edge (+47.5°) and then rests out of sight before the next pass. It only ever
+   travels left to right; the opacity fade at each end keeps the entry and exit soft. */
+@keyframes footer-sweep {
+  0% {
+    transform: rotate(-82deg);
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1);
+  }
+  8% {
+    opacity: 1;
+  }
+  62% {
+    opacity: 1;
+  }
+  72% {
+    transform: rotate(88deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(88deg);
+    opacity: 0;
+  }
+}
+.footer-sweep {
+  transform-box: view-box;
+  transform-origin: 440px 601px;
+  animation: footer-sweep 8s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .footer-sweep {
+    animation: none;
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-radar {
+    animation: none;
+    transform: rotate(118deg);
+  }
+  .hero-radar-counter {
+    animation: none;
+    transform: rotate(-118deg);
+  }
+}
+
+/* About › Leadership: rows of 4 on ultrawide (≥1920px). Unlayered so it wins over lg:grid-cols-3. */
+@media (min-width: 1920px) {
+  .leaders-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* About › Investors: all eight in one row once there is room for them. */
+@media (min-width: 1400px) {
+  .investors-row > li {
+    width: calc(100% / 8);
+  }
+}

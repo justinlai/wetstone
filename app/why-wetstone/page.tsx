@@ -1,0 +1,105 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import { Button } from "@/components/Button";
+import { Footer } from "@/components/Footer";
+import { FullBleedImage } from "@/components/FullBleedImage";
+import { PageHero } from "@/components/PageHero";
+import { Reveal } from "@/components/Reveal";
+import { SplitFeature } from "@/components/SplitFeature";
+
+export const metadata: Metadata = {
+  title: "Why Wetstone",
+  description: "The world needs more rocks. The ocean is the best source.",
+};
+
+const CASES = [
+  {
+    title: "The ocean is inevitable",
+    body: "Long timelines and high CapEx costs have caused structural underinvestment in new land mines. Rocks under the ocean are higher grade, easier to find, and cheaper to develop into producing assets.",
+    image: { src: "/images/case-inevitable.jpg", alt: "Surf breaking over deep blue water", position: "50% 40%" },
+  },
+  {
+    title: "The ocean is scalable",
+    body: "Because our operations float, Wetstone can run environmental baselining, exploration, and development across many sites at once, rather than doing each step incrementally to dig a giant, immovable hole in the ground.",
+    image: { src: "/images/case-scalable.jpg", alt: "Survey monitors in a vessel control room", position: "50% 50%" },
+  },
+  {
+    title: "The ocean is sustainable",
+    body: "Targeting specific areas with higher metal grades means a much smaller footprint than traditional metals and mining operations. Floating operations allow for dynamic response to environmental stress.",
+    image: { src: "/images/case-sustainable.jpg", alt: "Polymetallic nodules resting on the seafloor", position: "45% 50%" },
+  },
+];
+
+export default function WhyWetstonePage() {
+  return (
+    <>
+      <PageHero
+        eyebrow="Our mission"
+        title={
+          <>
+            The world needs more rocks.
+            <br />
+            The ocean is the best source.
+          </>
+        }
+        image={{ src: "/images/why-map-2x.jpg", alt: "Relief map of the world’s ocean floor", objectPosition: "50% 50%" }}
+        imageHeightClass="h-[339px] lg:h-[484px]"
+      />
+
+      {/* The case for the ocean: three cards reveal with a stagger. */}
+      <section className="bg-white px-[25px] pt-[60px] pb-[60px] lg:px-(--gutter) lg:pt-[95px] lg:pb-[100px]">
+        <ul className="grid gap-[50px] lg:grid-cols-3 lg:gap-[40px] lg:px-0">
+          {CASES.map((item, i) => (
+            <li key={item.title} className="flex flex-col">
+              <div data-nav-theme="dark" className="relative h-[260px] overflow-hidden lg:h-[362px]">
+                <Reveal variant="image" delay={i * 150} className="absolute inset-0">
+                  <Image src={item.image.src} alt={item.image.alt} fill sizes="(min-width: 1024px) 424px, 100vw" className="object-cover" style={{ objectPosition: item.image.position }} />
+                </Reveal>
+              </div>
+              <Reveal delay={i * 150 + 200}>
+                <h3 className="mt-[18px] text-[22px] font-semibold leading-[1.1] tracking-[-0.03em] text-black lg:mt-[22px] lg:text-[30px]">{item.title}</h3>
+                <p className="mt-3 text-[15px] font-light leading-[1.5] tracking-[-0.01em] text-black lg:mt-[22px] lg:text-[18px] lg:tracking-[-0.03em]">
+                  {item.body}
+                </p>
+              </Reveal>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <FullBleedImage
+        src="/images/copper-2x.jpg"
+        alt="Close-up of polished copper ribbons"
+        heightClass="h-[201px] lg:h-[448px]"
+        className="bg-[#555]"
+      />
+
+      <SplitFeature
+        heading={
+          <>
+            <span className="font-medium">A new copper mine takes 17 years to bring online,</span>{" "}
+            <span className="font-semibold">Wetstone is building a new metal supply chain in 5.</span>
+          </>
+        }
+        headingClassName="text-[34px] leading-[1.1] tracking-[-0.03em] text-black lg:max-w-[1124px] lg:text-[64px]"
+        image={{ src: "/images/crew-sunset-v2.jpg", alt: "Crew in safety gear recovering survey equipment on deck at sunset", objectPosition: "50% 50%" }}
+        imageWidth={842}
+        imageHeightClass="h-[278px] lg:h-[600px]"
+        rowGapClass="lg:mt-[134px]"
+        bodyClassName="lg:pl-[61px]"
+      >
+        <div className="space-y-[30px] text-[19px] font-light leading-[30px] tracking-[-0.01em] text-black lg:text-[18px]">
+          <p>
+            The IEA’s 2025 outlook projects a potential 30% copper supply shortfall by 2035, based on existing and announced mining projects. One new copper mine adds supply, but the process won’t serve the next century. Wetstone’s floating technology allows for speed, scale, and secure supply.
+          </p>
+          <p>To solve for the next century, Wetstone is taking to the seas.</p>
+        </div>
+        <Button href="/about#leadership" className="mt-[27px] self-start">
+          Our Team
+        </Button>
+      </SplitFeature>
+      <div className="lg:h-[36px]" />
+      <Footer />
+    </>
+  );
+}

@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #00245d;
+  --color-ink: #002143;
+  --color-abyss: #031227;
+  --color-deep: #050f24;
+  --color-muted: #c9d0d7;
+
+  /* TWK Lausanne, the brand face (loaded with next/font/local in app/layout.tsx). */
+  --font-sans: var(--font-lausanne), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-space-mono), ui-monospace, monospace;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Page side margin for desktop layouts: 48px on wide screens, 120px on ultrawide (≥1920px).
+   Mobile keeps its own 24–25px padding. */
+:root {
+  --gutter: 48px;
+}
+@media (min-width: 1920px) {
+  :root {
+    --gutter: 120px;
+  }
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: #ffffff;
+  color: #000000;
+  font-family: var(--font-sans);
+}
+
+/* ---------- Reveal animations (driven by components/Reveal.tsx) ---------- */
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
+  transition:
+    opacity 0.9s var(--ease-out-soft),
+    transform 0.9s var(--ease-out-soft);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.reveal-image {
+  opacity: 0;
+  transform: scale(1.06);
+  transition:
+    opacity 1.2s var(--ease-out-soft),
+    transform 1.6s var(--ease-out-soft);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.reveal[data-shown],
+.reveal-image[data-shown] {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-image {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Arrow icon used by every outline button; colored with currentColor. */
+.icon-arrow {
+  display: inline-block;
+  width: 10.5px;
+  height: 9px;
+  flex: none;
+  background-color: currentColor;
+  mask: url("/icons/arrow-white.svg") center / contain no-repeat;
+}

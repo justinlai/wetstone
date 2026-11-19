@@ -75,9 +75,13 @@
   }
 }
 
-/* About › Investors: all eight in one row once there is room for them. */
+/* About › Investors: every logo in one row once there is room for them. */
 @media (min-width: 1400px) {
+  .investors-row {
+    flex-wrap: nowrap;
+  }
   .investors-row > li {
-    width: calc(100% / 8);
+    flex: 1 1 0;
+    min-width: 0;
   }
 }

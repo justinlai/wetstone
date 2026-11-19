@@ -90,18 +90,11 @@ const LEADERS = [
     bio: "Lynda joined Wetstone from Tesla, where she led global cobalt and manganese strategy. Before that, she was an offshore engineer with Schlumberger and Shell. Lynda holds an MBA from Harvard Business School and an MPA from the Harvard Kennedy School where she was awarded a Fulbright Scholarship.",
   },
   {
-    name: "Sumeet Trehan",
-    role: "VP, AI and Applied Science",
-    photo: "/images/leader-sumeet.jpg",
-    linkedin: "https://www.linkedin.com/in/sumeettrehan/",
-    bio: "Sumeet joined Wetstone from Vitol, where he led the trading firm’s AI efforts. Before that, he spent 9 years at ExxonMobil. He holds a PhD in Computational Energy Resource Engineering from Stanford University.",
-  },
-  {
     name: "Rich Frazier",
     role: "General Counsel",
     photo: "/images/leader-rich.png",
     linkedin: "https://www.linkedin.com/in/richard-frazier-01716092/",
-    bio: "Rich was previously the deputy General Counsel at Total Energies. Rich holds a JD from the University of Chicago.",
+    bio: "Rich was previously the Deputy General Counsel at TotalEnergies. Rich holds a JD from the University of Chicago.",
   },
 ];
 

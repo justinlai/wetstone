@@ -69,7 +69,7 @@ export default function WhyWetstonePage() {
       />
 
       <SplitFeature
-        heading="A new terrestrial mine takes 20 years to build—Wetstone is building bigger, better mines in 5."
+        heading="A new terrestrial mine takes 20 years to build. Wetstone is building bigger, better mines in 5."
         headingClassName="text-[34px] leading-[1.1] tracking-[-0.03em] text-black lg:max-w-[1124px] lg:text-[64px]"
         image={{ src: "/images/boat-deck.jpg", alt: "Crew on deck of a research vessel at sea", objectPosition: "50% 50%" }}
         imageWidth={842}
@@ -79,7 +79,7 @@ export default function WhyWetstonePage() {
       >
         <div className="space-y-[30px] text-[19px] font-light leading-[30px] tracking-[-0.01em] text-black lg:text-[18px]">
           <p>
-            The IEA’s 2025 outlook projects a 30% copper shortfall by 2035, other metals are similarly stretched. New mines add supply but don’t scale the industry — Wetstone’s floating mines do both
+            The IEA’s 2025 outlook projects a 30% copper shortfall by 2035, other metals are similarly stretched. New mines add supply but don’t scale the industry. Wetstone’s floating mines do both
           </p>
         </div>
         <Button href="/who-we-are" className="mt-[27px] self-start">

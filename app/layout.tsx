@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Mono } from "next/font/google";
 import localFont from "next/font/local";
+import Script from "next/script";
 import { Navbar } from "@/components/Navbar";
 import "./globals.css";
 import "./effects.css";
@@ -40,6 +41,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full bg-white">
         <Navbar />
         <main>{children}</main>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-9R79FNZ1LG" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-9R79FNZ1LG');
+          `}
+        </Script>
       </body>
     </html>
   );

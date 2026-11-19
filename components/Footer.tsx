@@ -108,7 +108,7 @@ export function Footer() {
               </a>
             </div>
 
-            <ul className="mt-[120px] flex flex-col gap-[14.6px] text-[18px] font-medium uppercase leading-none tracking-[0.02em] text-white/70 md:text-[16px] lg:mt-0 lg:w-[125px] lg:gap-[17.7px] lg:text-[14.3px]">
+            <ul className="mt-[120px] flex flex-col gap-[14.6px] text-[18px] font-medium uppercase leading-none tracking-[0.02em] text-white/70 md:text-[16px] lg:mt-0 lg:ml-auto lg:w-[125px] lg:gap-[17.7px] lg:text-[14.3px]">
               {SITE_LINKS.map((link) => (
                 <li key={link.label}>
                   <Link href={link.href} className="transition-colors hover:text-white">

@@ -79,7 +79,7 @@ export default function WhyWetstonePage() {
       >
         <div className="space-y-[30px] text-[19px] font-light leading-[30px] tracking-[-0.01em] text-black lg:text-[18px]">
           <p>
-            The IEA’s 2025 outlook projects a 30% copper shortfall by 2035, other metals are similarly stretched. New mines add supply but don’t scale the industry. Wetstone’s floating mines do both
+            The IEA’s 2025 outlook projects a 30% copper shortfall by 2035, and other metals are similarly stretched. New mines add supply but don’t scale the industry. Wetstone’s floating mines do both
           </p>
         </div>
         <Button href="/who-we-are" className="mt-[27px] self-start">

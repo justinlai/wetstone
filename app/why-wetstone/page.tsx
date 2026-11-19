@@ -69,7 +69,7 @@ export default function WhyWetstonePage() {
       />
 
       <SplitFeature
-        heading="A new terrestrial mine takes 20 years to build— Wetstone is building bigger, better mines in 5."
+        heading="A new terrestrial mine takes 20 years to build—Wetstone is building bigger, better mines in 5."
         headingClassName="text-[34px] leading-[1.1] tracking-[-0.03em] text-black lg:max-w-[1124px] lg:text-[64px]"
         image={{ src: "/images/boat-deck.jpg", alt: "Crew on deck of a research vessel at sea", objectPosition: "50% 50%" }}
         imageWidth={842}

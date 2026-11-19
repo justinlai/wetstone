@@ -7,8 +7,8 @@ import { Logo } from "./Logo";
 
 export const NAV_LINKS = [
   { href: "/why-wetstone", label: "Our Mission" },
-  { href: "/how-it-works", label: "How We Work" },
-  { href: "/about", label: "About Us" },
+  { href: "/how-we-work", label: "How We Work" },
+  { href: "/who-we-are", label: "Who We Are" },
 ];
 
 type Theme = "light" | "dark";

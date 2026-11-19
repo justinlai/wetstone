@@ -6,7 +6,7 @@ import { PageHero } from "@/components/PageHero";
 import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "About us",
+  title: "Who we are",
   description: "Built by people who know the ocean.",
 };
 

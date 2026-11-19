@@ -5,7 +5,7 @@ import { PageHero } from "@/components/PageHero";
 import { HowWeDoIt } from "@/components/how/HowWeDoIt";
 
 export const metadata: Metadata = {
-  title: "How it works",
+  title: "How we work",
   description: "Wetstone is building the operating system that scales undersea minerals.",
 };
 

@@ -19,7 +19,7 @@ export default function HomePage() {
           <h2 className="max-w-[408px] text-[28px] lg:max-w-[560px] font-medium leading-[1.1] tracking-[-0.03em] text-navy lg:text-[44px]">
             Deep experience, new challenges
           </h2>
-          <Button href="/about#leadership">Explore the team</Button>
+          <Button href="/who-we-are#leadership">Explore the team</Button>
         </Reveal>
         <div data-nav-theme="dark" className="relative mt-[50px] aspect-[699/528] overflow-hidden bg-[#767676] lg:mt-0 lg:w-[48.5vw] lg:shrink-0">
           <Reveal variant="image" className="absolute inset-0">

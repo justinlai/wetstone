@@ -174,7 +174,7 @@ export function ValueChain() {
         <h2 className="text-[28px] font-medium leading-[1.1] tracking-[-0.03em] text-white lg:text-[44px]">
           Wetstone is building the full ocean mineral value chain
         </h2>
-        <Button href="/how-it-works" variant="light" className="mt-8 lg:mt-[50px]">
+        <Button href="/how-we-work" variant="light" className="mt-8 lg:mt-[50px]">
           How we work
         </Button>
       </Reveal>

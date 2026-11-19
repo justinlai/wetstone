@@ -5,8 +5,8 @@ import { Reveal } from "./Reveal";
 const SITE_LINKS = [
   { href: "/", label: "Home" },
   { href: "/why-wetstone", label: "Our Mission" },
-  { href: "/how-it-works", label: "How We Work" },
-  { href: "/about", label: "About Us" },
+  { href: "/how-we-work", label: "How We Work" },
+  { href: "/who-we-are", label: "Who We Are" },
 ];
 const EMAILS = ["media@wetstone.co", "info@wetstone.co"];
 

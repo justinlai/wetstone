@@ -65,7 +65,7 @@ export function HowWeDoIt() {
       title.style.color = mix(DEEP, WHITE, q);
       contentRef.current!.style.color = mix(DEEP, WHITE, q);
       if (m) {
-        title.style.transform = `translate3d(0, ${Math.max(120, vh / 2 - 300)}px, 0)`;
+        title.style.transform = `translate3d(0, ${Math.max(108, vh * 0.11)}px, 0)`;
         contentRef.current!.style.opacity = String(Math.max(0.3, q));
       } else {
         const startTop = Math.min(250, vh * 0.28);
@@ -183,7 +183,7 @@ export function HowWeDoIt() {
               {/* Mobile horizontal gauge — same tick style as desktop, laid horizontally */}
               <div
                 aria-hidden
-                className="absolute inset-x-6 top-[max(165px,calc(50svh-245px))] z-10 flex items-center gap-4 lg:hidden"
+                className="absolute inset-x-6 top-[max(155px,14.5svh)] z-10 flex items-center gap-4 lg:hidden"
               >
                 <span className="shrink-0 text-[13px] tabular-nums">
                   {pad(active + 1)} / {pad(STEPS.length)}
@@ -211,8 +211,8 @@ export function HowWeDoIt() {
                     style={{ opacity: i === 0 ? 1 : 0 }}
                   >
                     {/* Mobile: flex column — space at top clears title+gauge, icon centers in flex-1, text at bottom */}
-                    <div className="flex h-full flex-col px-6 pb-[max(40px,calc(env(safe-area-inset-bottom,0px)+20px))] pt-[max(210px,calc(50svh-200px))] lg:hidden">
-                      <div className="flex flex-1 min-h-0 items-center justify-center py-6">
+                    <div className="flex h-full flex-col justify-evenly px-6 pb-[max(20px,calc(env(safe-area-inset-bottom,0px)+4px))] pt-[max(195px,16.5svh)] lg:hidden">
+                      <div className="flex justify-center">
                         <div className="relative size-[min(260px,55vw,calc(100svh-490px))]">
                           <ExportedImage placeholder="empty" src={step.icon} alt="" fill sizes="260px" className="object-contain" />
                         </div>

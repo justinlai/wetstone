@@ -100,7 +100,7 @@ const LEADERS = [
     name: "Sumeet Trehan",
     role: "VP, AI + Applied Science",
     photo: "/images/leader-sumeet.jpg",
-    linkedin: "https://www.linkedin.com/in/sumeettrehan1/",
+    linkedin: "https://www.linkedin.com/in/sumeettrehan/",
     bio: "Sumeet leads Wetstone's AI and Applied Science team, which includes the exploration geology and geophysics teams. He joins from Vitol, where he led the team building AI and machine learning tools. Before that, he spent nearly nine years at ExxonMobil. Ph.D., Energy Resources Engineering, Stanford University.",
   },
 ];

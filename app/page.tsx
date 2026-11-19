@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import { Button } from "@/components/Button";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
@@ -23,7 +23,8 @@ export default function HomePage() {
         </Reveal>
         <div data-nav-theme="dark" className="relative mt-[50px] aspect-[699/528] overflow-hidden bg-[#767676] lg:mt-0 lg:w-[48.5vw] lg:shrink-0">
           <Reveal variant="image" className="absolute inset-0">
-            <Image
+            <ExportedImage
+              placeholder="empty"
               src="/images/team-control-room.jpg"
               alt="Operators at the controls of a remotely operated vehicle"
               fill

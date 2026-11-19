@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import { Button } from "@/components/Button";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
@@ -147,7 +147,7 @@ export default function AboutPage() {
               <div className="relative aspect-[392/445] overflow-hidden bg-[#c3c3c3]">
                 {leader.photo && (
                   <Reveal variant="image" delay={(i % 3) * 120} className="absolute inset-0">
-                    <Image src={leader.photo} alt={`Portrait of ${leader.name}`} fill sizes="(min-width: 1920px) 420px, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="object-cover object-top" />
+                    <ExportedImage placeholder="empty" src={leader.photo} alt={`Portrait of ${leader.name}`} fill sizes="(min-width: 1920px) 420px, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="object-cover object-top" />
                   </Reveal>
                 )}
               </div>
@@ -189,7 +189,7 @@ export default function AboutPage() {
                 {"text" in inv ? (
                   <span className="whitespace-nowrap text-[17px] font-medium leading-none tracking-[-0.02em] text-abyss">{inv.name}</span>
                 ) : "flat" in inv ? (
-                  <Image src={inv.src} alt={inv.name} width={inv.w} height={inv.h} className="max-w-full" />
+                  <ExportedImage placeholder="empty" src={inv.src} alt={inv.name} width={inv.w} height={inv.h} className="max-w-full" />
                 ) : (
                   <span
                     role="img"

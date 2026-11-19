@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import { useEffect, useRef } from "react";
 import { Button } from "../Button";
 import { Reveal } from "../Reveal";
@@ -137,7 +137,7 @@ export function ValueChain() {
   return (
     <section ref={sectionRef} data-nav-theme="dark" className="relative isolate overflow-hidden bg-[#002143] lg:h-[865px]">
       {/* Satellite view of the ocean (client's background.png, 18 Nov). */}
-      <Image src="/images/value-background.jpg" alt="" fill sizes="100vw" className="-z-10 object-cover" />
+      <ExportedImage placeholder="empty" src="/images/value-background.jpg" alt="" fill sizes="100vw" className="-z-10 object-cover" />
       {/* Soft hand-off from the dark depth panel above. */}
       <div aria-hidden className="absolute inset-x-0 top-0 -z-10 h-[220px] bg-gradient-to-b from-abyss to-transparent lg:h-[300px]" />
 
@@ -145,7 +145,8 @@ export function ValueChain() {
       <Reveal variant="image" className="relative aspect-[908/938] w-full max-w-[560px] lg:absolute lg:left-0 lg:top-0 lg:w-[908px] lg:max-w-none">
         <div ref={frameRef} className="absolute inset-0">
           <div ref={windowRef} className="absolute inset-0 bg-navy" style={{ clipPath: "inset(39% 39% 39% 39%)" }}>
-            <Image
+            <ExportedImage
+              placeholder="empty"
               src="/images/value-bathymetry.jpg"
               alt="Bathymetry survey map"
               fill

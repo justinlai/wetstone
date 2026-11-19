@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import Link from "next/link";
 import { Reveal } from "./Reveal";
 
@@ -85,7 +85,7 @@ export function Footer() {
   return (
     <footer id="contact" data-nav-theme="dark" className="relative isolate overflow-hidden bg-abyss text-white">
       {/* Seafloor still (poster for the looping footer video). */}
-      <Image src="/images/footer-seafloor.jpg" alt="" fill sizes="100vw" className="-z-10 object-cover" />
+      <ExportedImage placeholder="empty" src="/images/footer-seafloor.jpg" alt="" fill sizes="100vw" className="-z-10 object-cover" />
 
       <div className="px-5 py-[48px] lg:px-(--gutter) lg:py-[48px]">
         <Reveal className="relative overflow-hidden bg-white/[0.03] px-6 pt-[43px] pb-[34px] backdrop-blur-[10px] lg:h-[388px] lg:px-[60px] lg:pt-[60px] lg:pb-0 lg:backdrop-blur-[37px]">
@@ -93,7 +93,7 @@ export function Footer() {
 
           <div className="relative flex flex-col gap-[48px] lg:h-full lg:flex-row lg:justify-between lg:gap-0">
             <div className="flex flex-col items-start gap-6">
-              <Image src="/icons/footer-wordmark.svg" alt="Wetstone" width={224} height={29} className="h-[22px] w-[172px] lg:h-[28.8px] lg:w-[224.5px]" />
+              <ExportedImage placeholder="empty" src="/icons/footer-wordmark.svg" alt="Wetstone" width={224} height={29} className="h-[22px] w-[172px] lg:h-[28.8px] lg:w-[224.5px]" />
               <ul className="flex flex-col gap-2 text-[17px] font-medium uppercase leading-none tracking-[0.02em] text-white/70 md:text-[15px] lg:text-[14.3px]">
                 {EMAILS.map((email) => (
                   <li key={email}>
@@ -104,7 +104,7 @@ export function Footer() {
                 ))}
               </ul>
               <a href="https://www.linkedin.com/company/wetstoneglobal/" target="_blank" rel="noreferrer" aria-label="Wetstone on LinkedIn" className="max-lg:absolute max-lg:bottom-[38px] max-lg:right-6 lg:static">
-                <Image src="/icons/linkedin.svg" alt="" width={20} height={20} />
+                <ExportedImage placeholder="empty" src="/icons/linkedin.svg" alt="" width={20} height={20} />
               </a>
             </div>
 

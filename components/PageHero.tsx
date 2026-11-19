@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import type { ReactNode } from "react";
 import { Reveal } from "./Reveal";
 
@@ -30,7 +30,7 @@ export function PageHero({ eyebrow, title, titleClassName = "lg:max-w-[890px]", 
       </Reveal>
       <div data-nav-theme="dark" className={`relative mt-[30px] overflow-hidden bg-[#002247] lg:mx-(--gutter) lg:mt-[52px] ${imageHeightClass}`}>
         <Reveal variant="image" delay={150} className="absolute inset-0">
-          <Image src={image.src} alt={image.alt} fill preload sizes="(min-width: 1024px) 1394px, 100vw" className="object-cover" style={{ objectPosition: image.objectPosition }} />
+          <ExportedImage placeholder="empty" src={image.src} alt={image.alt} fill preload sizes="(min-width: 1024px) 1394px, 100vw" className="object-cover" style={{ objectPosition: image.objectPosition }} />
         </Reveal>
       </div>
     </section>

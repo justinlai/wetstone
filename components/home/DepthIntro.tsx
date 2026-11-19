@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import { useEffect, useRef } from "react";
 import { Button } from "../Button";
 
@@ -139,7 +139,7 @@ export function DepthIntro() {
             WebkitMaskImage: "linear-gradient(to bottom, transparent 0%, black 18%)",
           }}
         >
-          <Image src="/images/depth-waves.svg" alt="" fill unoptimized className="object-cover object-bottom" />
+          <ExportedImage placeholder="empty" src="/images/depth-waves.svg" alt="" fill unoptimized className="object-cover object-bottom" />
         </div>
       </section>
     </>

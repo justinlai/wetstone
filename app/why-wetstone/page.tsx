@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import { Button } from "@/components/Button";
 import { Footer } from "@/components/Footer";
 import { FullBleedImage } from "@/components/FullBleedImage";
@@ -47,7 +47,7 @@ export default function WhyWetstonePage() {
             <li key={item.title} className="flex flex-col">
               <div data-nav-theme="dark" className="relative h-[260px] overflow-hidden lg:h-[362px]">
                 <Reveal variant="image" delay={i * 150} className="absolute inset-0">
-                  <Image src={item.image.src} alt={item.image.alt} fill sizes="(min-width: 1024px) 424px, 100vw" className="object-cover" style={{ objectPosition: item.image.position }} />
+                  <ExportedImage placeholder="empty" src={item.image.src} alt={item.image.alt} fill sizes="(min-width: 1024px) 424px, 100vw" className="object-cover" style={{ objectPosition: item.image.position }} />
                 </Reveal>
               </div>
               <Reveal delay={i * 150 + 200}>

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import type { CSSProperties } from "react";
 import { Reveal } from "../Reveal";
 
@@ -84,7 +84,7 @@ const BEAM =
 export function HeroSweep() {
   return (
     <section data-nav-theme="dark" className="relative isolate h-svh min-h-[600px] overflow-hidden bg-[#0039AF] [container-type:size] lg:h-[866px]">
-      <Image src="/images/hero-map-2x.jpg" alt="" fill preload sizes="100vw" className="-z-10 object-cover" />
+      <ExportedImage placeholder="empty" src="/images/hero-map-2x.jpg" alt="" fill preload sizes="100vw" className="-z-10 object-cover" />
       <div aria-hidden className="absolute inset-0 -z-10 bg-abyss/20" />
 
       {/* 1440 × 866 artboard, scaled to cover the section like the photo. */}
@@ -114,7 +114,7 @@ export function HeroSweep() {
           <div className="absolute inset-0" style={{ maskImage: TRAIL_MASK, WebkitMaskImage: TRAIL_MASK }}>
             <div className="hero-radar-counter absolute inset-0">
               <div className="absolute" style={ART_IN_SQUARE}>
-                <Image src="/images/hero-heat-2x.png" alt="" fill sizes="100vw" className="object-fill" />
+                <ExportedImage placeholder="empty" src="/images/hero-heat-2x.png" alt="" fill sizes="100vw" className="object-fill" />
               </div>
             </div>
           </div>

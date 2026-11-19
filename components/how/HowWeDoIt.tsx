@@ -66,13 +66,13 @@ export function HowWeDoIt() {
       contentRef.current!.style.color = mix(DEEP, WHITE, q);
       if (m) {
         title.style.transform = `translate3d(0, ${Math.max(108, vh * 0.11)}px, 0)`;
-        contentRef.current!.style.opacity = String(Math.max(0.3, q));
+        contentRef.current!.style.opacity = String(q);
       } else {
         const startTop = Math.min(250, vh * 0.28);
         const endTop = Math.max(130, vh / 2 - 230);
         const endScale = 0.583;
         title.style.transform = `translate3d(0, ${(startTop + (endTop - startTop) * q).toFixed(1)}px, 0) scale(${(1 + (endScale - 1) * q).toFixed(4)})`;
-        contentRef.current!.style.opacity = String(Math.max(0.3, smooth(y / 400)));
+        contentRef.current!.style.opacity = String(smooth(y / 400));
       }
 
       // Stage 2: steps
@@ -90,11 +90,16 @@ export function HowWeDoIt() {
           panel.style.visibility = "visible";
           return;
         }
-        const d = p - i;
-        const ad = Math.max(0, Math.abs(d) - 0.3) / 0.7;
-        panel.style.opacity = String(clamp(1 - 2.0 * ad));
-        panel.style.transform = `translate3d(0, ${(-Math.sign(d) * ad * 300).toFixed(1)}px, 0)`;
-        panel.style.visibility = ad > 0.5 ? "hidden" : "visible";
+        const nearest = Math.round(p);
+        if (i === nearest) {
+          panel.style.opacity = "1";
+          panel.style.transform = "translate3d(0, 0, 0)";
+          panel.style.visibility = "visible";
+        } else {
+          panel.style.opacity = "0";
+          panel.style.transform = `translate3d(0, ${Math.sign(i - nearest) * 20}px, 0)`;
+          panel.style.visibility = i === nearest - 1 || i === nearest + 1 ? "visible" : "hidden";
+        }
       });
 
       // Desktop gauge
@@ -207,7 +212,7 @@ export function HowWeDoIt() {
                       panelRefs.current[i] = el;
                     }}
                     aria-hidden={i !== active}
-                    className="absolute inset-0 will-change-transform max-lg:transition-[opacity,transform] max-lg:duration-500 max-lg:ease-[cubic-bezier(0.22,1,0.36,1)] lg:inset-y-auto lg:inset-x-0 lg:top-0"
+                    className="absolute inset-0 will-change-transform max-lg:transition-[opacity,transform] max-lg:duration-500 max-lg:ease-[cubic-bezier(0.22,1,0.36,1)] lg:inset-y-auto lg:inset-x-0 lg:top-0 lg:transition-[opacity,transform] lg:duration-200 lg:ease-out"
                     style={{ opacity: i === 0 ? 1 : 0 }}
                   >
                     {/* Mobile: flex column — space at top clears title+gauge, icon centers in flex-1, text at bottom */}

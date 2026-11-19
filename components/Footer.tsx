@@ -103,7 +103,7 @@ export function Footer() {
                   </li>
                 ))}
               </ul>
-              <a href="https://www.linkedin.com/company/wetstoneglobal/" target="_blank" rel="noreferrer" aria-label="Wetstone on LinkedIn" className="max-lg:absolute max-lg:bottom-[38px] max-lg:right-6 lg:static">
+              <a href="https://www.linkedin.com/company/wetstoneglobal/" target="_blank" rel="noreferrer" aria-label="Wetstone on LinkedIn" className="hidden lg:block">
                 <ExportedImage placeholder="empty" src="/icons/linkedin.svg" alt="" width={20} height={20} />
               </a>
             </div>
@@ -118,9 +118,14 @@ export function Footer() {
               ))}
             </ul>
 
-            <p className="text-[16px] uppercase leading-[1.3] tracking-[0.05em] text-white/50 lg:absolute lg:bottom-[60px] lg:left-0 lg:text-[15.8px]">
-              Wetstone Global Inc
-            </p>
+            <div className="flex items-end justify-between lg:block">
+              <p className="text-[16px] uppercase leading-[1.3] tracking-[0.05em] text-white/50 lg:absolute lg:bottom-[60px] lg:left-0 lg:text-[15.8px]">
+                Wetstone Global Inc
+              </p>
+              <a href="https://www.linkedin.com/company/wetstoneglobal/" target="_blank" rel="noreferrer" aria-label="Wetstone on LinkedIn" className="lg:hidden">
+                <ExportedImage placeholder="empty" src="/icons/linkedin.svg" alt="" width={20} height={20} />
+              </a>
+            </div>
           </div>
         </Reveal>
       </div>

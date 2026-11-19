@@ -113,7 +113,7 @@ export function DepthIntro() {
           <div
             ref={gaugeRef}
             aria-hidden
-            className="relative my-auto h-[min(420px,calc(100svh-420px))] w-3 shrink-0 lg:h-[min(480px,calc(100svh-460px))] lg:w-[14px]"
+            className="relative mt-auto h-[clamp(0px,calc(100svh-480px),420px)] w-3 shrink-0 lg:my-auto lg:h-[min(480px,calc(100svh-460px))] lg:w-[14px]"
           >
             <div className="absolute inset-0 opacity-[0.28]" style={ticks} />
             <div ref={fillRef} className="absolute inset-0" style={{ ...ticks, clipPath: "inset(0 0 100% 0)" }} />
